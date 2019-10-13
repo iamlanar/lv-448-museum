@@ -1,7 +1,5 @@
 package academy.softserve.museum.entities;
 
-import java.util.List;
-
 public class Author extends Entity {
     private String firstName;
     private String lastName;

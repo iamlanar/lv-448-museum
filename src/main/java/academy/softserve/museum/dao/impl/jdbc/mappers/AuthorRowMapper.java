@@ -1,6 +1,5 @@
 package academy.softserve.museum.dao.impl.jdbc.mappers;
 
-import academy.softserve.museum.dao.impl.jdbc.mappers.RowMapper;
 import academy.softserve.museum.entities.Author;
 
 import java.sql.ResultSet;

@@ -5,21 +5,18 @@ import java.util.List;
 public class Exhibit extends Entity {
     private ExhibitType type;
     private String material;
-    private Author author;
     private String technique;
 
-    public Exhibit(long id, ExhibitType type, String material, Author author, String technique) {
+    public Exhibit(long id, ExhibitType type, String material, String technique) {
         super(id);
         this.type = type;
         this.material = material;
-        this.author = author;
         this.technique = technique;
     }
 
-    public Exhibit(ExhibitType type, String material, Author author, String technique, Audience audience, List<Author> authors) {
+    public Exhibit(ExhibitType type, String material, String technique) {
         this.type = type;
         this.material = material;
-        this.author = author;
         this.technique = technique;
     }
 
@@ -41,15 +38,6 @@ public class Exhibit extends Entity {
 
     public Exhibit setMaterial(String material) {
         this.material = material;
-        return this;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public Exhibit setAuthor(Author author) {
-        this.author = author;
         return this;
     }
 
