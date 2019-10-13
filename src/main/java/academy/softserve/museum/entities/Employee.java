@@ -6,23 +6,20 @@ public class Employee extends Entity {
     private EmployeePosition position;
     private String login;
     private String password;
-    private Audience audience;
 
-    public Employee(long id, String firstName, String lastName, EmployeePosition position, Audience audience, String login, String password) {
+    public Employee(long id, String firstName, String lastName, EmployeePosition position, String login, String password) {
         super(id);
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
-        this.audience = audience;
         this.login = login;
         this.password = password;
     }
 
-    public Employee(String firstName, String lastName, EmployeePosition position, Audience audience, String login, String password) {
+    public Employee(String firstName, String lastName, EmployeePosition position, String login, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
-        this.audience = audience;
         this.login = login;
         this.password = password;
     }
@@ -54,15 +51,6 @@ public class Employee extends Entity {
 
     public Employee setPosition(EmployeePosition position) {
         this.position = position;
-        return this;
-    }
-
-    public Audience getAudience() {
-        return audience;
-    }
-
-    public Employee setAudience(Audience audience) {
-        this.audience = audience;
         return this;
     }
 

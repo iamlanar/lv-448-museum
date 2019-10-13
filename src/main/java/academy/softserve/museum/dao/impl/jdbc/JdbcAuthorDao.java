@@ -2,10 +2,9 @@ package academy.softserve.museum.dao.impl.jdbc;
 
 import academy.softserve.museum.dao.AuthorDao;
 import academy.softserve.museum.entities.Author;
+import academy.softserve.museum.entities.Exhibit;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,17 +16,23 @@ public class JdbcAuthorDao implements AuthorDao {
     }
 
     @Override
+    public List<Exhibit> findExhibitsByAuthor(Author author) {
+        return null;
+    }
+
+    @Override
+    public void addExhibitAuthor(Author author, Exhibit exhibit) {
+
+    }
+
+    @Override
+    public void deleteExhibitAuthor(Author author, Exhibit exhibit) {
+
+    }
+
+    @Override
     public void save(Author objectToSave) {
-        String INSERT_AUTHOR = "INSERT INTO autors(first_name, last_name) values (?, ?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(INSERT_AUTHOR)) {
-            statement.setString(1, objectToSave.getFirstName());
-            statement.setString(2, objectToSave.getLastName());
-
-            statement.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
@@ -46,8 +51,7 @@ public class JdbcAuthorDao implements AuthorDao {
     }
 
     @Override
-    public void updateById(long id, Author newObject) {
+    public void update(Author newObject) {
 
     }
-
 }

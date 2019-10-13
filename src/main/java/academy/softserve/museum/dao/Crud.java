@@ -13,6 +13,6 @@ public interface Crud<T> {
 
     List<T> findAll();
 
-    void updateById(long id, T newObject);
+    void update(T newObject);
 
 }

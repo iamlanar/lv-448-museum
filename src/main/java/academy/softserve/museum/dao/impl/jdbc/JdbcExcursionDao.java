@@ -16,13 +16,9 @@ public class JdbcExcursionDao implements ExcursionDao {
         this.connection = connection;
     }
 
-    @Override
-    public List<Excursion> findAvailableExcursions(Date dateStart, Date dateEnd) {
-        return null;
-    }
 
     @Override
-    public ExcursionStatistic excursionStatistic(Date dateStart, Date dateEnd) {
+    public ExcursionStatistic findStatistic(Date dateStart, Date dateEnd) {
         return null;
     }
 
@@ -47,7 +43,7 @@ public class JdbcExcursionDao implements ExcursionDao {
     }
 
     @Override
-    public void updateById(long id, Excursion newObject) {
+    public void update(Excursion newObject) {
 
     }
 }

@@ -1,5 +1,6 @@
 package academy.softserve.museum.dao;
 
+import academy.softserve.museum.entities.Audience;
 import academy.softserve.museum.entities.Employee;
 import academy.softserve.museum.entities.EmployeePosition;
 import academy.softserve.museum.entities.statistic.EmployeeStatistic;
@@ -11,8 +12,10 @@ public interface EmployeeDao extends Crud<Employee> {
 
     List<Employee> findByPosition(EmployeePosition position);
 
-    List<Employee> findAvailableTourGuides(Date dateStart, Date dateEnd);
+    EmployeeStatistic findStatistic(Date dateStart, Date dateEnd);
 
-    EmployeeStatistic employeeStatistic(Date dateStart, Date dateEnd);
+    Audience findAudienceByEmployee(Employee employee);
+
+    void updateEmployeeAudience(Employee employee, Audience audience);
 
 }

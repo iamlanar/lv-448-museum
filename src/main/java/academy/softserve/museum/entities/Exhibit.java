@@ -7,17 +7,13 @@ public class Exhibit extends Entity {
     private String material;
     private Author author;
     private String technique;
-    private Audience audience;
-    private List<Author> authors;
 
-    public Exhibit(long id, ExhibitType type, String material, Author author, String technique, Audience audience, List<Author> authors) {
+    public Exhibit(long id, ExhibitType type, String material, Author author, String technique) {
         super(id);
         this.type = type;
         this.material = material;
         this.author = author;
         this.technique = technique;
-        this.audience = audience;
-        this.authors = authors;
     }
 
     public Exhibit(ExhibitType type, String material, Author author, String technique, Audience audience, List<Author> authors) {
@@ -25,8 +21,6 @@ public class Exhibit extends Entity {
         this.material = material;
         this.author = author;
         this.technique = technique;
-        this.audience = audience;
-        this.authors = authors;
     }
 
     public Exhibit() {
@@ -65,24 +59,6 @@ public class Exhibit extends Entity {
 
     public Exhibit setTechnique(String technique) {
         this.technique = technique;
-        return this;
-    }
-
-    public Audience getAudience() {
-        return audience;
-    }
-
-    public Exhibit setAudience(Audience audience) {
-        this.audience = audience;
-        return this;
-    }
-
-    public List<Author> getAuthors() {
-        return authors;
-    }
-
-    public Exhibit setAuthors(List<Author> authors) {
-        this.authors = authors;
         return this;
     }
 

@@ -1,6 +1,7 @@
 package academy.softserve.museum.dao.impl.jdbc;
 
 import academy.softserve.museum.dao.EmployeeDao;
+import academy.softserve.museum.entities.Audience;
 import academy.softserve.museum.entities.Employee;
 import academy.softserve.museum.entities.EmployeePosition;
 import academy.softserve.museum.entities.statistic.EmployeeStatistic;
@@ -17,19 +18,25 @@ public class JdbcEmployeeDao implements EmployeeDao {
         this.connection = connection;
     }
 
+
     @Override
     public List<Employee> findByPosition(EmployeePosition position) {
         return null;
     }
 
     @Override
-    public List<Employee> findAvailableTourGuides(Date dateStart, Date dateEnd) {
+    public EmployeeStatistic findStatistic(Date dateStart, Date dateEnd) {
         return null;
     }
 
     @Override
-    public EmployeeStatistic employeeStatistic(Date dateStart, Date dateEnd) {
+    public Audience findAudienceByEmployee(Employee employee) {
         return null;
+    }
+
+    @Override
+    public void updateEmployeeAudience(Employee employee, Audience audience) {
+
     }
 
     @Override
@@ -53,7 +60,7 @@ public class JdbcEmployeeDao implements EmployeeDao {
     }
 
     @Override
-    public void updateById(long id, Employee newObject) {
+    public void update(Employee newObject) {
 
     }
 }

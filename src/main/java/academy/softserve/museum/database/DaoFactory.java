@@ -23,10 +23,10 @@ public final class DaoFactory {
     static {
         Properties properties = new Properties();
 
-        try(InputStream out = new FileInputStream("src/main/resources/database.properties")){
+        try (InputStream out = new FileInputStream(PROPERTIES_PATH)) {
             properties.load(out);
             System.out.println();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
@@ -52,5 +52,13 @@ public final class DaoFactory {
 
     public static ExhibitDao exhibitDao() {
         return new JdbcExhibitDao(connection);
+    }
+
+    public static void close() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

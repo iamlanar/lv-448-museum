@@ -19,14 +19,40 @@ public class JdbcExhibitDao implements ExhibitDao {
         this.connection = connection;
     }
 
+
     @Override
     public List<Exhibit> findByAuthor(Author author) {
         return null;
     }
 
     @Override
-    public List<Exhibit> findByEmployee(Employee audienceManager) {
+    public List<Exhibit> findByEmployee(Employee employee) {
         return null;
+    }
+
+    @Override
+    public List<Author> findAuthorsByExhibit(Exhibit exhibit) {
+        return null;
+    }
+
+    @Override
+    public Audience findAudienceByExhibit(Exhibit exhibit) {
+        return null;
+    }
+
+    @Override
+    public void updateExhibitAudience(Exhibit exhibit, Audience audience) {
+
+    }
+
+    @Override
+    public void addExhibitAuthor(Exhibit exhibit, Author author) {
+
+    }
+
+    @Override
+    public void deleteExhibitAuthor(Exhibit exhibit, Author author) {
+
     }
 
     @Override
@@ -35,7 +61,7 @@ public class JdbcExhibitDao implements ExhibitDao {
     }
 
     @Override
-    public ExhibitStatistic exhibitStatistic() {
+    public ExhibitStatistic findStatistic() {
         return null;
     }
 
@@ -60,7 +86,7 @@ public class JdbcExhibitDao implements ExhibitDao {
     }
 
     @Override
-    public void updateById(long id, Exhibit newObject) {
+    public void update(Exhibit newObject) {
 
     }
 }
