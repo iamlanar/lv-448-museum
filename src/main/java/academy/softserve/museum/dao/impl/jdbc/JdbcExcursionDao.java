@@ -3,7 +3,6 @@ package academy.softserve.museum.dao.impl.jdbc;
 import academy.softserve.museum.dao.ExcursionDao;
 import academy.softserve.museum.entities.Excursion;
 import academy.softserve.museum.entities.statistic.ExcursionStatistic;
-
 import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
