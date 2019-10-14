@@ -76,8 +76,8 @@ public class ExhibitServiceImpl implements ExhibitService {
   }
 
   @Override
-  public Map<Audience, List<Exhibit>> findAllGroupedByAudience(Audience audience) {
-    return exhibitDao.findAllGroupedByAudience(audience);
+  public Map<Audience, List<Exhibit>> findAllGroupedByAudience() {
+    return exhibitDao.findAllGroupedByAudience();
   }
 
   @Override

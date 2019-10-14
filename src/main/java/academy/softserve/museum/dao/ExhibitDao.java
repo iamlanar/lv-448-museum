@@ -22,7 +22,7 @@ public interface ExhibitDao extends Crud<Exhibit> {
 
     void deleteExhibitAuthor(Exhibit exhibit, Author author);
 
-    Map<Audience, List<Exhibit>> findAllGroupedByAudience(Audience audience);
+    Map<Audience, List<Exhibit>> findAllGroupedByAudience();
 
     ExhibitStatistic findStatistic();
 

@@ -85,7 +85,7 @@ public class JdbcExcursionDao implements ExcursionDao {
                     return Optional.of(new ExcursionRowMapper().mapRow(resultSet));
                 }
 
-                return Optional.empty();
+                    return Optional.empty();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

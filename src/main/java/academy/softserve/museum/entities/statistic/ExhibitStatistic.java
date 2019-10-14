@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.Map;
 
 public class ExhibitStatistic {
-    private Map<String, List<Integer>> materialStatistic;
-    private Map<String, List<Integer>> techniqueStatistic;
+    private Map<String, Integer> materialStatistic;
+    private Map<String, Integer> techniqueStatistic;
 
-    public ExhibitStatistic(Map<String, List<Integer>> materialStatistic, Map<String, List<Integer>> techniqueStatistic) {
+    public ExhibitStatistic(Map<String, Integer> materialStatistic, Map<String, Integer> techniqueStatistic) {
         this.materialStatistic = materialStatistic;
         this.techniqueStatistic = techniqueStatistic;
     }
@@ -15,21 +15,19 @@ public class ExhibitStatistic {
     public ExhibitStatistic() {
     }
 
-    public Map<String, List<Integer>> getMaterialStatistic() {
+    public Map<String, Integer> getMaterialStatistic() {
         return materialStatistic;
     }
 
-    public ExhibitStatistic setMaterialStatistic(Map<String, List<Integer>> materialStatistic) {
+    public void setMaterialStatistic(Map<String, Integer> materialStatistic) {
         this.materialStatistic = materialStatistic;
-        return this;
     }
 
-    public Map<String, List<Integer>> getTechniqueStatistic() {
+    public Map<String, Integer> getTechniqueStatistic() {
         return techniqueStatistic;
     }
 
-    public ExhibitStatistic setTechniqueStatistic(Map<String, List<Integer>> techniqueStatistic) {
+    public void setTechniqueStatistic(Map<String, Integer> techniqueStatistic) {
         this.techniqueStatistic = techniqueStatistic;
-        return this;
     }
 }
