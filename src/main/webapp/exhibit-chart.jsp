@@ -3,6 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
     <title>Museum</title>
 </head>
@@ -10,12 +11,15 @@
 <jsp:include page="fragment/header.jsp"/>
 <section class="main-section">
     <div class="container">
-        <div class="row justify-content-md-center">
-            <h1 class="text-primary">Best museum ever!</h1>
-        </div>
+        <canvas class="chart" id="horizontalBar"></canvas>
     </div>
 </section>
 <jsp:include page="fragment/footer.jsp"/>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+<script src="static/js/ui.js"></script>
 </html>

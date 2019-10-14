@@ -6,7 +6,6 @@ import academy.softserve.museum.entities.Author;
 import academy.softserve.museum.entities.Employee;
 import academy.softserve.museum.entities.Exhibit;
 import academy.softserve.museum.entities.statistic.ExhibitStatistic;
-
 import java.sql.Connection;
 import java.util.List;
 import java.util.Map;

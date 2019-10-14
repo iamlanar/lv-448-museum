@@ -1,12 +1,12 @@
 package academy.softserve.museum.dao.impl.jdbc;
 
 import academy.softserve.museum.dao.TimetableDao;
-import academy.softserve.museum.dao.impl.jdbc.mappers.TimetableRowMapper;
 import academy.softserve.museum.entities.Employee;
 import academy.softserve.museum.entities.Excursion;
 import academy.softserve.museum.entities.Timetable;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
