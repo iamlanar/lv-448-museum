@@ -1,16 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: root
-  Date: 14.10.19
-  Time: 13:15
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Museum</title>
 </head>
 <body>
-$END$
+<jsp:include page="fragment/header.jsp"/>
+<section class="main-section">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <h1 class="text-primary">Best museum ever!</h1>
+        </div>
+    </div>
+</section>
+<jsp:include page="fragment/footer.jsp"/>
 </body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
