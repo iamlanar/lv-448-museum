@@ -1,14 +1,17 @@
 package academy.softserve.museum.entities.statistic;
 
+import academy.softserve.museum.entities.Excursion;
+
 import java.sql.Date;
+import java.util.Map;
 
 public class ExcursionStatistic {
-    private long excursionCount;
+    private Map<Excursion, Integer> excursionCountMap;
     private Date dateStart;
     private Date dateEnd;
 
-    public ExcursionStatistic(long excursionCount, Date dateStart, Date dateEnd) {
-        this.excursionCount = excursionCount;
+    public ExcursionStatistic(Map<Excursion, Integer> excursionCountMap, Date dateStart, Date dateEnd) {
+        this.excursionCountMap = excursionCountMap;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
     }
@@ -16,12 +19,12 @@ public class ExcursionStatistic {
     public ExcursionStatistic() {
     }
 
-    public long getExcursionCount() {
-        return excursionCount;
+    public Map<Excursion, Integer> getExcursionCountMap() {
+        return excursionCountMap;
     }
 
-    public ExcursionStatistic setExcursionCount(long excursionCount) {
-        this.excursionCount = excursionCount;
+    public ExcursionStatistic setExcursionCountMap(Map<Excursion, Integer> excursionCountMap) {
+        this.excursionCountMap = excursionCountMap;
         return this;
     }
 
