@@ -79,12 +79,13 @@ public class JdbcEmployeeDao implements EmployeeDao {
         String FIND_AUDIENCE_BY_EMPLOYEE = "SELECT * FROM audiences WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(FIND_AUDIENCE_BY_EMPLOYEE)) {
+            statement.setLong(1, employee.getId());
 
-            try(ResultSet resultSet = statement.executeQuery()){
-
+            try (ResultSet resultSet = statement.executeQuery()) {
+                res
             }
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
