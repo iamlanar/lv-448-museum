@@ -46,6 +46,9 @@ public class JdbcEmployeeDao implements EmployeeDao {
     }
 
     @Override
+    public Employee findByUsername(String username) { return null; }
+
+    @Override
     public EmployeeStatistic findStatistic(Date dateStart, Date dateEnd) {
         String FIND_STATISTIC =
                 "SELECT e.id, e.first_name, e.last_name, e.position, e.login, e.password, " +
