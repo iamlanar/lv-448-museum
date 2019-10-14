@@ -46,7 +46,23 @@ public class JdbcEmployeeDao implements EmployeeDao {
     }
 
     @Override
-    public Employee findByUsername(String username) { return null; }
+    public Employee findByUsername(String username) {
+        String FIND_EMPLOYEE_BY_USERNAME = "SELECT * FROM employees WHERE login = ?";
+
+        try (PreparedStatement statement = connection.prepareStatement(FIND_EMPLOYEE_BY_USERNAME)) {
+            statement.setString(1, username);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return new EmployeeRowMaper().mapRow(resultSet);
+                }
+            }
+
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public EmployeeStatistic findStatistic(Date dateStart, Date dateEnd) {

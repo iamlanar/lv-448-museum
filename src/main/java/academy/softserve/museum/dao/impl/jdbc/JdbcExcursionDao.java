@@ -18,6 +18,7 @@ public class JdbcExcursionDao implements ExcursionDao {
 
     @Override
     public ExcursionStatistic findStatistic(Date dateStart, Date dateEnd) {
+
         return null;
     }
 
