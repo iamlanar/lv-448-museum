@@ -33,11 +33,13 @@
                         <button type="submit" class="btn btn-dark">
                             Filter
                         </button>
+                        <form action="<c:url value="/add-excursion"/>" method="get">
+                            <button type="submit" class="btn btn-dark">
+                                New
+                            </button>
+                        </form>
                         <button type="submit" class="btn btn-dark">
                             Statistics
-                        </button>
-                        <button type="submit" class="btn btn-dark">
-                            New
                         </button>
                     </div> <!-- form group [buttons] -->
                 </form>
