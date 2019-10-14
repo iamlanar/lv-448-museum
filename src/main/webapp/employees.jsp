@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div id="filter-panel" class="navbar bg-light rounded col-xl-12">
-                <form class="form-inline" role="form">
+                <div class="form-inline">
                     <div class="form-group">
                         <label class="filter-col" for="employee-position">Position:</label>
                         <select class="browser-default custom-select" id="employee-position">
@@ -27,9 +27,11 @@
                         <button type="submit" class="btn btn-dark">
                             Filter
                         </button>
-                        <button type="submit" class="btn btn-dark">
-                            New
-                        </button>
+                        <form class="form-inline" action="<c:url value="/add-employee"/>" method="get">
+                            <button type="submit" class="btn btn-dark">
+                                New
+                            </button>
+                        </form>
                         <button type="submit" class="btn btn-dark">
                             Statistics
                         </button>
@@ -41,7 +43,7 @@
                             <option id="option-1" value="1">Free guides</option>
                         </select>
                     </div> <!-- form group [additional-filters] -->
-                </form>
+                </div>
                 <form class="form-inline additional-filter hidden" id="free-guides">
                     <div class="form-group">
                         <label class="filter-col" for="date-from">Date from:</label>
