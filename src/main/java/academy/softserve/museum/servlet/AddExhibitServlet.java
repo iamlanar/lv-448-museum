@@ -17,6 +17,9 @@ public class AddExhibitServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        String type = req.getParameter("type");
+        String material = req.getParameter("material");
+        String technic = req.getParameter("technic");
+        int audience = Integer.parseInt(req.getParameter("audience"));
     }
 }

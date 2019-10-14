@@ -17,21 +17,25 @@
                     <div class="form-group">
                         <label for="exhibit-type">Type</label>
                         <input type="text" class="form-control" id="exhibit-type"
+                               name="type"
                                placeholder="Enter exhibit type">
                     </div>
                     <div class="form-group">
                         <label for="exhibit-material">Material</label>
                         <input type="text" class="form-control" id="exhibit-material"
+                               name="material"
                                placeholder="Enter exhibit material">
                     </div>
                     <div class="form-group">
                         <label for="exhibit-technic">Technic</label>
                         <input type="text" class="form-control" id="exhibit-technic"
+                               name="technic"
                                placeholder="Enter exhibit technic">
                     </div>
                     <div class="form-group">
                         <label for="exhibit-audience">Audience</label>
                         <input type="number" class="form-control" id="exhibit-audience"
+                               name="audience"
                                placeholder="Enter exhibit audience">
                     </div>
                     <div class="text-right">
