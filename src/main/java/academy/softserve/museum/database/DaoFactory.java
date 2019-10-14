@@ -20,6 +20,8 @@ public final class DaoFactory {
     private static final Connection connection;
     private static final String PROPERTIES_PATH = "src/main/resources/database.properties";
 
+    private DaoFactory(){}
+
     static {
         Properties properties = new Properties();
 
