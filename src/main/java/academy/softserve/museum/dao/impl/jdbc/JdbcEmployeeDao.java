@@ -24,6 +24,9 @@ public class JdbcEmployeeDao implements EmployeeDao {
     }
 
     @Override
+    public Employee findByUsername(String username) { return null; }
+
+    @Override
     public EmployeeStatistic findStatistic(Date dateStart, Date dateEnd) {
         return null;
     }
